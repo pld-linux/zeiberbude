@@ -26,13 +26,19 @@ wyliczana cena us³ugi na podstawie czasu korzystania.
 %setup -q -n %{name}
 %patch0 -p1
 
+# needed for gcc 3.3 (multi-line string issue)
+sed -e '2,281s/$/\\n\\/' src/copying.h > copying.h.tmp
+mv -f copying.h.tmp src/copying.h
+
 %build
 QTDIR=%{_prefix}
 QMAKESPEC=%{_datadir}/qt/mkspecs/linux-g++
 export QTDIR QMAKESPEC
-qmake $RPM_BUILD_ROOT/zeiberbude.pro
+qmake
 
-%{__make}
+%{__make} \
+	CXX="%{__cxx}" \
+	CXXFLAGS="%{rpmcflags} -pipe -Wall -W -DVERSION=\\\"2.0.4\\\" -DZEIBERBUDE_RC=\\\"/etc/zeiberbude/config.xml\\\" -DZEIBERBUDE_DB=\\\"/var/lib/zeiberbude/db.xml\\\" -DQT_NO_DEBUG"
 
 %install
 rm -rf $RPM_BUILD_ROOT
