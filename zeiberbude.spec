@@ -9,6 +9,7 @@ Source0:	http://dl.sourceforge.net/zeiberbude/%{name}-%{version}.tar.gz
 # Source0-md5:	90dec3e78492989e8a3bdf89c71abe25
 Patch0:		%{name}-dirs.patch
 URL:		http://zeiberbude.sourceforge.net/
+BuildRequires:	qmake
 BuildRequires:	qt-devel >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
