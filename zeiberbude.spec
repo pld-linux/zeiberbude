@@ -18,7 +18,9 @@ your internet cyber-cafe. The price is computed automatically for the
 used time of the customer.
 
 %description -l pl
-todo
+Za pomoc± Zeiberbude mo¿na ³atwo kontrolowaæ dostêp do komputera we
+w³asnej kawiarni internetowej. Dla ka¿dego klienta jest automatycznie
+wyliczana cena us³ugi na podstawie czasu korzystania.
 
 %prep
 %setup -q -n zeiberbude
