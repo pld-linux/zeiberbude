@@ -1,0 +1,13 @@
+--- zeiberbude/zeiberbude.pro	Mon Sep  9 12:09:32 2002
++++ zeiberbude/zeiberbude.pro.diff	Tue Aug 12 02:10:49 2003
+@@ -69,8 +69,8 @@
+ INSTALLS += translations
+ 
+ !win32 {
+-  DEFINES *= ZEIBERBUDE_RC=\"/usr/local/share/zeiberbude/config.xml\"
+-  DEFINES *= ZEIBERBUDE_DB=\"/var/zeiberbude/db.xml\"
++  DEFINES *= ZEIBERBUDE_RC=\"/etc/zeiberbude/config.xml\"
++  DEFINES *= ZEIBERBUDE_DB=\"/var/lib/zeiberbude/db.xml\"
+ }
+ 
+ win32 {
