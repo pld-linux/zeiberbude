@@ -60,5 +60,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc TODO Authors
 %attr(755,root,root) %{_bindir}/*
 %dir %{_sysconfdir}/%{name}
-%attr(640,root,root) %config(noreplace) %{_sysconfdir}/%{name}/config.xml
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}/config.xml
+%dir /var/lib/zeiberbude
 %attr(666,root,root) /var/lib/zeiberbude/db.xml
