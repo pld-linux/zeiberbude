@@ -1,20 +1,20 @@
-Summary:	zeiberbude
-Summary(pl):	zeiberbude
+Summary:	zeiberbude - controlling access to the computer in Internet cyber-cafe
+Summary(pl):	zeiberbude - kontrola dostêpu do komputera w kawiarniach internetowych
 Name:		zeiberbude
 Version:	2.0.4
 Release:	0.1
 License:	GPL v2
-URL:		http://zeiberbude.sourceforge.net
 Group:		Applications/Communications
 Source0:	http://dl.sourceforge.net/zeiberbude/%{name}-%{version}.tar.gz
 # Source0-md5:	90dec3e78492989e8a3bdf89c71abe25
 Patch0:		%{name}-dirs.patch
+URL:		http://zeiberbude.sourceforge.net/
 BuildRequires:	qt-devel >= 3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 With Zeiberbude you can control easily the access to the computer in
-your internet cyber-cafe. The price is computed automatically for the
+your Internet cyber-cafe. The price is computed automatically for the
 used time of the customer.
 
 %description -l pl
@@ -23,7 +23,7 @@ w³asnej kawiarni internetowej. Dla ka¿dego klienta jest automatycznie
 wyliczana cena us³ugi na podstawie czasu korzystania.
 
 %prep
-%setup -q -n zeiberbude
+%setup -q -n %{name}
 %patch0 -p1
 
 %build
@@ -34,13 +34,13 @@ qmake $RPM_BUILD_ROOT/zeiberbude.pro
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 install -d $RPM_BUILD_ROOT%{_libdir}
 install -d $RPM_BUILD_ROOT%{_sysconfdir}/zeiberbude
 install -d $RPM_BUILD_ROOT/var/lib/zeiberbude
+
 install zeiberbude $RPM_BUILD_ROOT%{_bindir}
 install config.xml $RPM_BUILD_ROOT%{_sysconfdir}/zeiberbude
 install db.xml $RPM_BUILD_ROOT/var/lib/zeiberbude
