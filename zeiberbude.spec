@@ -59,5 +59,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc TODO Authors
 %attr(755,root,root) %{_bindir}/*
-%attr(640,root,root) %config(noreplace) %{_sysconfdir}/zeiberbude/config.xml
+%dir %{_sysconfdir}/%{name}
+%attr(640,root,root) %config(noreplace) %{_sysconfdir}/%{name}/config.xml
 %attr(666,root,root) /var/lib/zeiberbude/db.xml
