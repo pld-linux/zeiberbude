@@ -43,10 +43,7 @@ qmake
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_libdir}
-install -d $RPM_BUILD_ROOT%{_sysconfdir}/zeiberbude
-install -d $RPM_BUILD_ROOT/var/lib/zeiberbude
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_libdir},%{_sysconfdir}/zeiberbude,/var/lib/zeiberbude}
 
 install zeiberbude $RPM_BUILD_ROOT%{_bindir}
 install config.xml $RPM_BUILD_ROOT%{_sysconfdir}/zeiberbude
