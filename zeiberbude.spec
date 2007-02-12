@@ -1,5 +1,5 @@
 Summary:	zeiberbude - controlling access to the computer in Internet cyber-cafe
-Summary(pl):	zeiberbude - kontrola dostêpu do komputera w kawiarniach internetowych
+Summary(pl.UTF-8):   zeiberbude - kontrola dostÄ™pu do komputera w kawiarniach internetowych
 Name:		zeiberbude
 Version:	2.0.4
 Release:	0.1
@@ -18,10 +18,10 @@ With Zeiberbude you can control easily the access to the computer in
 your Internet cyber-cafe. The price is computed automatically for the
 used time of the customer.
 
-%description -l pl
-Za pomoc± Zeiberbude mo¿na ³atwo kontrolowaæ dostêp do komputera we
-w³asnej kawiarni internetowej. Dla ka¿dego klienta jest automatycznie
-wyliczana cena us³ugi na podstawie czasu korzystania.
+%description -l pl.UTF-8
+Za pomocÄ… Zeiberbude moÅ¼na Å‚atwo kontrolowaÄ‡ dostÄ™p do komputera we
+wÅ‚asnej kawiarni internetowej. Dla kaÅ¼dego klienta jest automatycznie
+wyliczana cena usÅ‚ugi na podstawie czasu korzystania.
 
 %prep
 %setup -q -n %{name}
