@@ -1,5 +1,5 @@
 Summary:	zeiberbude - controlling access to the computer in Internet cyber-cafe
-Summary(pl.UTF-8):   zeiberbude - kontrola dostępu do komputera w kawiarniach internetowych
+Summary(pl.UTF-8):	zeiberbude - kontrola dostępu do komputera w kawiarniach internetowych
 Name:		zeiberbude
 Version:	2.0.4
 Release:	0.1
